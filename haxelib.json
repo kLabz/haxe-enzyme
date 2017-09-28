@@ -1,0 +1,19 @@
+{
+  "name": "enzyme",
+  "description": "Externs for Enzyme, a JavaScript Testing utility for React.",
+  "version": "0.1.0",
+  "releasenote": "Initial release",
+  "url": "https://github.com/kLabz/haxe-enzyme",
+  "license": "MIT",
+  "tags": [
+    "javascript",
+    "react"
+  ],
+  "classPath": "src",
+  "contributors": [
+    "klabz"
+  ],
+  "dependencies": {
+    "react": "1.2.1"
+  }
+}

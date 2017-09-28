@@ -1,0 +1,34 @@
+{
+  "name": "haxe-enzyme",
+  "version": "0.1.0",
+  "description": "Haxe externs for Enzyme, a JavaScript Testing utility for React.",
+  "keywords": [
+    "haxe",
+    "react",
+    "testing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kLabz/haxe-enzyme"
+  },
+  "bugs": {
+    "url": "https://github.com/kLabz/haxe-enzyme/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Rudy G",
+    "email": "k@klabz.org",
+    "url": "https://github.com/kLabz"
+  },
+  "scripts": {
+    "test": "haxe test.hxml && node bin/test.js"
+  },
+  "devDependencies": {
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-test-renderer": "^16.0.0"
+  }
+}

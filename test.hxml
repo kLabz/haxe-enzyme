@@ -1,0 +1,9 @@
+-js bin/test.js
+-main test.EnzymeTests
+
+-cp src
+-lib buddy
+-lib react
+
+-D nodejs
+-D buddy-colors
