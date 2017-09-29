@@ -7,9 +7,9 @@ class Foo extends ReactComponent {
 	override public function render() {
 		return jsx('
 			<div>
-				<$Bar />
-				<$Bar />
-				<$Bar />
+				<$Bar foo="foo" />
+				<$Bar foo="bar" />
+				<$Bar foo="foobar" />
 			</div>
 		');
 	}

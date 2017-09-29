@@ -3,10 +3,14 @@ package test.component;
 import react.ReactComponent;
 import react.ReactMacro.jsx;
 
-class Bar extends ReactComponent {
+typedef BarProps = {
+	@:optional var foo:String;
+}
+
+class Bar extends ReactComponentOfProps<BarProps> {
 	override public function render() {
 		return jsx('
-			<div>
+			<div className=${props.foo}>
 				Bar
 			</div>
 		');

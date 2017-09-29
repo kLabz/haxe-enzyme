@@ -13,9 +13,10 @@ class TestComponent extends ReactComponentOfProps<TestComponentProps> {
 			<div>
 				${renderTitle()}
 
-				<div className="content"></div>
-				<div className="content"></div>
-				<div className="content"></div>
+				<div id="header" />
+				<div className="content" />
+				<div className="content" />
+				<p className="content" />
 			</div>
 		');
 	}
