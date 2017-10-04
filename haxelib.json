@@ -12,8 +12,5 @@
   "classPath": "src",
   "contributors": [
     "klabz"
-  ],
-  "dependencies": {
-    "react": "1.2.1"
-  }
+  ]
 }

@@ -4,6 +4,10 @@
 -cp src
 -lib buddy
 -lib react
+-lib js-kit
 
 -D nodejs
 -D buddy-colors
+
+--next
+-cmd node bin/test.js

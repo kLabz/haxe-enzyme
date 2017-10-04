@@ -21,7 +21,7 @@
     "url": "https://github.com/kLabz"
   },
   "scripts": {
-    "test": "haxe test.hxml && node bin/test.js"
+    "test": "haxe test.hxml"
   },
   "devDependencies": {
     "enzyme": "^3.0.0",
