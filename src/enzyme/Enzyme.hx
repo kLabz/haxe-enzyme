@@ -1,6 +1,6 @@
 package enzyme;
 
-import js.npm.Cheerio;
+import cheerio.Cheerio;
 import react.ReactComponent.ReactElement;
 
 @:jsRequire("enzyme")

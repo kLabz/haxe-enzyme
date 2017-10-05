@@ -3,7 +3,7 @@ package enzyme;
 import js.html.DOMElement;
 import haxe.extern.EitherType;
 import haxe.Constraints.Function;
-import js.npm.Cheerio;
+import cheerio.Cheerio;
 import react.ReactComponent;
 
 /**
