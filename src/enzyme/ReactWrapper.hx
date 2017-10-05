@@ -28,7 +28,7 @@ private typedef Predicate = ReactWrapper->Bool;
 	See https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md
 **/
 extern class ReactWrapper {
-	public var length:Int;
+	public var length(default, null):Int;
 
 	/**
 		Find every node in the render tree that matches the provided selector.

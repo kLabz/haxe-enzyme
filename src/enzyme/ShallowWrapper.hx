@@ -26,7 +26,7 @@ private typedef Predicate = ShallowWrapper->Bool;
 	See https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md
 **/
 extern class ShallowWrapper {
-	public var length:Int;
+	public var length(default, null):Int;
 
 	/**
 		Find every node in the render tree that matches the provided selector.
