@@ -5,6 +5,7 @@ import test.suite.*;
 
 class EnzymeTests implements Buddy<[
 	StaticAPITests,
+	MountAPITests,
 	ShallowAPITests,
 	ShallowFindTests
 ]> {}

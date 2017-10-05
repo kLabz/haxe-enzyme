@@ -15,9 +15,9 @@ import react.ReactComponent;
 
 	See https://github.com/airbnb/enzyme/blob/master/docs/api/selector.md
 **/
-typedef Selector = Dynamic;
+private typedef Selector = Dynamic;
 
-typedef Predicate = ShallowWrapper->Bool;
+private typedef Predicate = ShallowWrapper->Bool;
 
 /**
 	Shallow rendering is useful to constrain yourself to testing a component as a unit,
