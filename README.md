@@ -85,7 +85,7 @@ Enzyme provides 3 rendering modes:
 
 Read the full [API Documentation](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md)
 
-See the [buddy test suite](/test/suite/ShallowAPITests.hx)
+See the [buddy test suite](/src/test/suite/ShallowAPITests.hx)
 
 
 ### `Enzyme.render(...)`
@@ -94,7 +94,7 @@ See the [buddy test suite](/test/suite/ShallowAPITests.hx)
 
 Read the full [API Documentation](https://github.com/airbnb/enzyme/blob/master/docs/api/render.md)
 
-See the [buddy test suite](/test/suite/StaticAPITests.hx)
+See the [buddy test suite](/src/test/suite/StaticAPITests.hx)
 
 
 ### `Enzyme.mount(...)`
@@ -103,7 +103,7 @@ See the [buddy test suite](/test/suite/StaticAPITests.hx)
 
 Read the full [API Documentation](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md)
 
-See the [buddy test suite](/test/suite/MountAPITests.hx)
+See the [buddy test suite](/src/test/suite/MountAPITests.hx)
 
 
 ## Lifecycle spies
@@ -154,7 +154,7 @@ it("should follow the react component lifecycle", {
 });
 ```
 
-See the [buddy test suite](/test/suite/LifecycleSpyTests.hx)
+See the [buddy test suite](/src/test/suite/LifecycleSpyTests.hx)
 
 ## Previous React versions
 
