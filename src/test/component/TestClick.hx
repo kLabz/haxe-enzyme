@@ -4,15 +4,30 @@ import react.ReactComponent;
 import react.ReactMacro.jsx;
 
 typedef TestClickProps = {
-	@:optional var onClick:Dynamic->Void;
+	var onClick:Void->Void;
 }
 
-class TestClick extends ReactComponentOfProps<TestClickProps> {
+typedef TestClickState = {
+	var count:Int;
+}
+
+class TestClick extends ReactComponentOfPropsAndState<TestClickProps, TestClickState> {
+	public function new(props:TestClickProps) {
+		super(props);
+		state = {count: 0};
+	}
+
 	override public function render() {
 		return jsx('
 			<div>
-				<button onClick=${props.onClick} />
+				<button onClick=$onClick />
+				Clicked ${state.count} times.
 			</div>
 		');
+	}
+
+	function onClick(_) {
+		setState(function(state) return {count: state.count + 1});
+		props.onClick();
 	}
 }

@@ -2,9 +2,7 @@ package test.suite;
 
 import buddy.SingleSuite;
 import jsdom.Jsdom;
-import enzyme.Enzyme.configure;
 import enzyme.Enzyme.mount;
-import enzyme.adapter.React16Adapter;
 import react.ReactMacro.jsx;
 import test.component.*;
 
@@ -12,10 +10,6 @@ using buddy.Should;
 
 class MountAPITests extends SingleSuite {
 	public function new() {
-		configure({
-			adapter: new React16Adapter()
-		});
-
 		JsdomSetup.init();
 
 		describe("Full rendering API", {
@@ -66,7 +60,7 @@ class MountAPITests extends SingleSuite {
 
 			it("should simulate click events", {
 				var nbCalls:Int = 0;
-				var onClick = function(_) nbCalls++;
+				var onClick = function() nbCalls++;
 
 				var wrapper = mount(jsx('
 					<$TestClick onClick=$onClick />

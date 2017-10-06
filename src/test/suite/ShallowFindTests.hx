@@ -1,9 +1,7 @@
 package test.suite;
 
 import buddy.SingleSuite;
-import enzyme.Enzyme.configure;
 import enzyme.Enzyme.shallow;
-import enzyme.adapter.React16Adapter;
 import react.ReactMacro.jsx;
 import test.component.*;
 
@@ -11,10 +9,6 @@ using buddy.Should;
 
 class ShallowFindTests extends SingleSuite {
 	public function new() {
-		configure({
-			adapter: new React16Adapter()
-		});
-
 		describe("Shallow API: .find(selector)", {
 			it("should find by css selector", {
 				var wrapper = shallow(jsx('

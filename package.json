@@ -1,7 +1,7 @@
 {
   "name": "haxe-enzyme",
-  "version": "0.2.0",
-  "description": "Haxe externs for Enzyme, a JavaScript Testing utility for React.",
+  "version": "0.3.0",
+  "description": "Haxe externs and tools for Enzyme, a JavaScript Testing utility for React.",
   "keywords": [
     "haxe",
     "react",

@@ -1,9 +1,7 @@
 package test.suite;
 
 import buddy.SingleSuite;
-import enzyme.Enzyme.configure;
 import enzyme.Enzyme.shallow;
-import enzyme.adapter.React16Adapter;
 import react.ReactMacro.jsx;
 import test.component.*;
 
@@ -11,10 +9,6 @@ using buddy.Should;
 
 class ShallowAPITests extends SingleSuite {
 	public function new() {
-		configure({
-			adapter: new React16Adapter()
-		});
-
 		describe("Shallow rendering API", {
 			it("should render three <Bar /> components", {
 				var wrapper = shallow(jsx('
@@ -52,7 +46,7 @@ class ShallowAPITests extends SingleSuite {
 
 			it("should simulate click events", {
 				var nbCalls:Int = 0;
-				var onClick = function(_) nbCalls++;
+				var onClick = function() nbCalls++;
 
 				var wrapper = shallow(jsx('
 					<$TestClick onClick=$onClick />

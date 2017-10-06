@@ -1,8 +1,8 @@
 {
   "name": "enzyme",
-  "description": "Externs for Enzyme, a JavaScript Testing utility for React.",
-  "version": "0.2.0",
-  "releasenote": "Added Static and Full DOM rendering",
+  "description": "Externs and tools for Enzyme, a JavaScript Testing utility for React.",
+  "version": "0.3.0",
+  "releasenote": "Added lifecycle spy for react components",
   "url": "https://github.com/kLabz/haxe-enzyme",
   "license": "MIT",
   "tags": [
