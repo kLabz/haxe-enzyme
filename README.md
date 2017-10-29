@@ -71,7 +71,7 @@ class StaticAPITests extends buddy.SingleSuite {
 }
 ```
 
-For a full working example, see [test/](/test/).
+For a full working example, see [test/](/src/test/).
 These tests will be updated to include all tests from the enzyme API documentation.
 
 

@@ -10,7 +10,8 @@ class EnzymeTests implements Buddy<[
 	MountAPITests,
 	ShallowAPITests,
 	ShallowFindTests,
-	LifecycleSpyTests
+	LifecycleSpyTests,
+	EnzymeMatchersTests
 ]> {
 	static function __init__() {
 		configure({

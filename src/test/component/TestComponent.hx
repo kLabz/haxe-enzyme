@@ -9,8 +9,12 @@ typedef TestComponentProps = {
 
 class TestComponent extends ReactComponentOfProps<TestComponentProps> {
 	override public function render() {
+		var style = {
+			display: "inline-block"
+		};
+
 		return jsx('
-			<div>
+			<div style=$style>
 				${renderTitle()}
 
 				<div id="header" />

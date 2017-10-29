@@ -2,6 +2,7 @@ package enzyme;
 
 import haxe.extern.EitherType;
 import haxe.Constraints.Function;
+import cheerio.Cheerio;
 import react.ReactComponent;
 
 /**
@@ -158,12 +159,10 @@ extern class ShallowWrapper {
 	public function shallow(?options:ShallowRenderOptions):ShallowWrapper;
 
 	/**
-		/!\ Not available until Cheerio externs are done.
-
 		Returns a CheerioWrapper of the current node's subtree.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/render.md
 	**/
-	// public function render():CheerioWrapper;
+	public function render():Cheerio;
 
 	/**
 		A method that un-mounts the component.
@@ -193,13 +192,13 @@ extern class ShallowWrapper {
 		Returns the wrapper's underlying node.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/getNode.md
 	**/
-	public function getNode():ReactElement;
+	public function getElement():ReactElement;
 
 	/**
 		Returns the wrapper's underlying nodes.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/getNodes.md
 	**/
-	public function getNodes():Array<ReactElement>;
+	public function getElements():Array<ReactElement>;
 
 	/**
 		Returns a wrapper of the node at the provided index of the current wrapper.
@@ -272,6 +271,11 @@ extern class ShallowWrapper {
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/setContext.md
 	**/
 	public function setContext(context:Dynamic):ShallowWrapper;
+
+	/**
+		Returns the root component.
+	**/
+	public function root():ShallowWrapper;
 
 	/**
 		Returns the instance of the root component.

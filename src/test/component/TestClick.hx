@@ -28,6 +28,6 @@ class TestClick extends ReactComponentOfPropsAndState<TestClickProps, TestClickS
 
 	function onClick(_) {
 		setState(function(state) return {count: state.count + 1});
-		props.onClick();
+		if (props.onClick != null) props.onClick();
 	}
 }
