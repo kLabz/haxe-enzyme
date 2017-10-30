@@ -1,5 +1,6 @@
 package enzyme;
 
+import haxe.Constraints.Function;
 import react.ReactComponent;
 import enzyme.LifecycleSpyMacro.injectSpy;
 
@@ -15,6 +16,15 @@ class LifecycleSpy {
 	public var componentWillUpdate(default, null):SpyState;
 	public var componentDidUpdate(default, null):SpyState;
 	public var shouldComponentUpdate(default, null):SpyState;
+
+	public dynamic function onRender() {}
+	public dynamic function onComponentWillMount() {}
+	public dynamic function onComponentDidMount() {}
+	public dynamic function onComponentWillUnmount() {}
+	public dynamic function onComponentWillReceiveProps(nextProps) {}
+	public dynamic function onComponentWillUpdate(nextProps, nextState) {}
+	public dynamic function onComponentDidUpdate(prevProps, prevState) {}
+	public dynamic function onShouldComponentUpdate(nextProps, nextState) {}
 
 	public function new(component:Class<ReactComponent>) {
 		isActive = true;
@@ -44,14 +54,14 @@ class LifecycleSpy {
 	public function reset():Void {
 		if (!isActive) return;
 
-		render = new SpyState();
-		componentWillMount = new SpyState();
-		componentDidMount = new SpyState();
-		componentWillUnmount = new SpyState();
-		componentWillReceiveProps = new SpyState();
-		componentWillUpdate = new SpyState();
-		componentDidUpdate = new SpyState();
-		shouldComponentUpdate = new SpyState();
+		render = new SpyState(onRender);
+		componentWillMount = new SpyState(onComponentWillMount);
+		componentDidMount = new SpyState(onComponentDidMount);
+		componentWillUnmount = new SpyState(onComponentWillUnmount);
+		componentWillReceiveProps = new SpyState(onComponentWillReceiveProps);
+		componentWillUpdate = new SpyState(onComponentWillUpdate);
+		componentDidUpdate = new SpyState(onComponentDidUpdate);
+		shouldComponentUpdate = new SpyState(onShouldComponentUpdate);
 	}
 
 	function extractPrototype(component:Class<ReactComponent>):ReactComponentPrototype {
@@ -115,11 +125,16 @@ private class SpyState {
 	public var calledOnce(default, null):Bool = false;
 	public var callCount(default, null):Int = 0;
 
-	public function new() {}
+	var cb:Function;
 
-	public function call():Void {
+	public function new(cb:Function) {
+		this.cb = cb;
+	}
+
+	public function call(args:Array<Dynamic>):Void {
 		called = true;
 		callCount++;
 		calledOnce = callCount == 1;
+		Reflect.callMethod(this, cb, args);
 	}
 }

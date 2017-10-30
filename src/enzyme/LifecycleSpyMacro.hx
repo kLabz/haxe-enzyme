@@ -29,7 +29,7 @@ class LifecycleSpyMacro {
 				{
 					args: functionArgs.map(parseFunctionArg),
 					expr: macro {
-						$i{methodName}.call();
+						$i{methodName}.call([$a{callArgs}]);
 
 						var initialMethod = prototype.$methodName;
 						if (initialMethod != null)

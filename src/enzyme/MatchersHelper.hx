@@ -32,6 +32,17 @@ class MatchersHelper {
 		return "[unknown]";
 	}
 
+	public static function getRWName(node:ReactWrapper):String {
+		if (node.length == 1) {
+			return node.name();
+		} else if (node.length > 1) {
+			var types = node.map(function(n, _) return getRWName(n)).join(", ");
+			return '[$types]';
+		}
+
+		return "[unknown]";
+	}
+
 	public static function getREName(re:ReactElement):String {
 		if (re.type != null && re.type.displayName != null)
 			return re.type.displayName;

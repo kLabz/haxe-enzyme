@@ -92,7 +92,7 @@ extern class ShallowWrapper {
 	public function matchesElement(node:ReactElement):Bool;
 
 	/**
-		Returns whether or not the current node has the given class name or not.
+		Returns whether or not the current node has the given class name.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/hasClass.md
 	**/
 	public function hasClass(className:String):Bool;

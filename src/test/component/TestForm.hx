@@ -29,13 +29,18 @@ class TestForm extends ReactComponentOfState<TestFormState> {
 
 				<input id="checked" defaultChecked=$true />
 				<input id="not" defaultChecked=$false />
-				<input id="tertiary" defaultChecked=$true checked=$false />
 
 				<input id="novalue" />
 				<input id="dvalue" defaultValue=$1 />
-				<input id="tvalue" defaultValue=$1 value=$2 />
 
-				<input id="click" checked=${state.checked} disabled=${state.disabled} value=${state.value} />
+				<div>
+					<input
+						id="click"
+						ref="ref"
+						checked=${state.checked}
+						disabled=${state.disabled}
+						value=${state.value} />
+				</div>
 			</div>
 		');
 	}

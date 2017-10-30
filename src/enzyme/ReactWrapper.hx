@@ -85,7 +85,7 @@ extern class ReactWrapper {
 	public function containsAnyMatchingElements(nodes:Array<ReactElement>):Bool;
 
 	/**
-		Returns whether or not the current root node has the given class name or not.
+		Returns whether or not the current root node has the given class name.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/hasClass.md
 	**/
 	public function hasClass(className:String):Bool;
@@ -172,13 +172,13 @@ extern class ReactWrapper {
 		Returns the wrapper's underlying node.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/getNode.md
 	**/
-	public function getNode():ReactElement;
+	public function getElement():ReactElement;
 
 	/**
 		Returns the wrapper's underlying nodes.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/getNodes.md
 	**/
-	public function getNodes():Array<ReactElement>;
+	public function getElements():Array<ReactElement>;
 
 	/**
 		Returns the outer most DOMComponent of the current wrapper.
@@ -340,7 +340,7 @@ extern class ReactWrapper {
 		Taps into the wrapper method chain. Helpful for debugging.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/tap.md
 	**/
-	public function tap(intercepter:ShallowWrapper->Void):ReactWrapper;
+	public function tap(intercepter:ReactWrapper->Void):ReactWrapper;
 
 	/**
 		Returns whether or not any of the nodes in the wrapper match the provided selector.
