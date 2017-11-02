@@ -1,6 +1,6 @@
 {
   "name": "haxe-enzyme",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Haxe externs and tools for Enzyme, a JavaScript Testing utility for React.",
   "keywords": [
     "haxe",
@@ -21,7 +21,10 @@
     "url": "https://github.com/kLabz"
   },
   "scripts": {
-    "test": "haxe test.hxml"
+    "test": "haxe test.hxml && node bin/test.js",
+    "test-all": "npm run test-react15 && npm run test-react16",
+    "test-react15": "cd test/react-15 && npm test",
+    "test-react16": "cd test/react-16 && npm test"
   },
   "devDependencies": {
     "enzyme": "^3.0.0",

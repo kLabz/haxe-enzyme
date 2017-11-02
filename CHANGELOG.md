@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1 (2017-11-02)
+
+* Added tests for React 15 and React 16
+* Minor fix for React 15
+
 ## 0.4.0 (2017-10-31)
 
 * Added matchers from [enzyme-matchers](https://github.com/airbnb/enzyme). See [EnzymeMatchersTests](src/test/suite/EnzymeMatchersTests.hx).

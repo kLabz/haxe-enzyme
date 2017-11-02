@@ -158,6 +158,5 @@ See the [buddy test suite](/src/test/suite/LifecycleSpyTests.hx)
 
 ## Previous React versions
 
-Although react adapters externs for versions 13, 14 and 15 are provided, this library currently focuses on Enzyme v3 + React 16.
-
-Other adapters should work just as fine but are not tested yet. This should be added in a near future.
+Although react adapters externs for versions 13, 14 and 15 are provided, this library focuses on Enzyme v3 + React 15 or 16.
+Tests for [react 15](test/react-15) and [react 16](test/react-16) are included.

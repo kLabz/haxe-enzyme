@@ -6,13 +6,22 @@ class MatchersHelper {
 	public static function getSWName(node:ShallowWrapper):String {
 		if (node.root() == node) {
 			var instance = node.instance();
-			if (instance != null && Reflect.hasField(instance, "updater")) {
-				var updater:ReactShallowUpdater = Reflect.field(instance, "updater");
-				var renderer = updater.renderer;
+			if (instance != null) {
+				if (Reflect.hasField(instance, "_reactInternalInstance")) {
+					var internalInstance = Reflect.field(instance, "_reactInternalInstance");
 
-				if (renderer != null) {
-					var el = renderer.element;
-					if (el != null) return getREName(el);
+					if (Reflect.hasField(internalInstance, "_currentElement")) {
+						var currentElement = Reflect.field(internalInstance, "_currentElement");
+						return getREName(currentElement);
+					}
+				} else if (Reflect.hasField(instance, "updater")) {
+					var updater:ReactShallowUpdater = Reflect.field(instance, "updater");
+					var renderer = updater.renderer;
+
+					if (renderer != null) {
+						var el = renderer.element;
+						if (el != null) return getREName(el);
+					}
 				}
 			}
 		}

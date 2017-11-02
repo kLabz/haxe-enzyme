@@ -1,0 +1,19 @@
+{
+  "dependencies": [
+    {
+      "name": "buddy",
+      "type": "haxelib",
+      "version": null
+    },
+    {
+      "name": "enzyme",
+      "type": "haxelib",
+      "version": null
+    },
+    {
+      "name": "react",
+      "type": "haxelib",
+      "version": null
+    }
+  ]
+}

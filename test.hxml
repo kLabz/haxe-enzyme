@@ -8,5 +8,5 @@
 -D nodejs
 -D buddy-colors
 
---next
--cmd node bin/test.js
+# Temporary bugfix for react 16 (waiting for a PR in haxe-react)
+-D react_monomorphic
