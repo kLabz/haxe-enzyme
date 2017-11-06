@@ -22,9 +22,9 @@
   },
   "scripts": {
     "test": "haxe test.hxml && node bin/test.js",
-    "test-all": "npm run test-react15 && npm run test-react16",
-    "test-react15": "cd test/react-15 && npm test",
-    "test-react16": "cd test/react-16 && npm test"
+    "test:all": "npm run test:react15 && npm run test:react16",
+    "test:react15": "cd test/react-15 && npm test",
+    "test:react16": "cd test/react-16 && npm test"
   },
   "devDependencies": {
     "enzyme": "^3.0.0",
