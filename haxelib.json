@@ -1,7 +1,7 @@
 {
   "name": "enzyme",
   "description": "Externs and tools for Enzyme, a JavaScript Testing utility for React.",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "releasenote": "Added tests for react 15 and react 16 (See CHANGELOG.md)",
   "url": "https://github.com/kLabz/haxe-enzyme",
   "license": "MIT",

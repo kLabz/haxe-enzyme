@@ -1,4 +1,4 @@
-package test.suite;
+package test.suite.shallow;
 
 import buddy.SingleSuite;
 import enzyme.Enzyme.shallow;

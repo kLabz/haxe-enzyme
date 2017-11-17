@@ -2,11 +2,12 @@
 -main test.EnzymeTests
 
 -cp src
+-cp test/src
 -lib buddy
 -lib react
 
 -D nodejs
 -D buddy-colors
 
-# Temporary bugfix for react 16 (waiting for a PR in haxe-react)
+# Temporary bugfix for react 16 (waiting for haxe-react 1.2.2+)
 -D react_monomorphic

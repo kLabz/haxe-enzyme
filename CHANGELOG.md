@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2 (2017-11-17)
+
+* Moved tests sources to avoid conflicts when using lib.
+
 ## 0.4.1 (2017-11-02)
 
 * Added tests for React 15 and React 16.

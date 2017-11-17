@@ -3,6 +3,7 @@ package test;
 import buddy.Buddy;
 import enzyme.Enzyme.configure;
 import test.suite.*;
+import test.suite.shallow.*;
 
 #if react15
 import enzyme.adapter.React15Adapter as Adapter;
