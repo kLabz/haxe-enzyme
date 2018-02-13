@@ -4,14 +4,14 @@ import react.ReactComponent;
 import react.ReactMacro.jsx;
 
 typedef TestClickProps = {
-	var onClick:Void->Void;
+	@:optional var onClick:Void->Void;
 }
 
 typedef TestClickState = {
 	var count:Int;
 }
 
-class TestClick extends ReactComponentOfPropsAndState<TestClickProps, TestClickState> {
+class TestClick extends ReactComponentOf<TestClickProps, TestClickState> {
 	public function new(props:TestClickProps) {
 		super(props);
 		state = {count: 0};
