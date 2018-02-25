@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0 (2018-02-25)
+
+* Added redux helpers. See [EnzymeRedux](src/enzyme/EnzymeRedux.hx).
+
 ## 0.4.2 (2017-11-17)
 
 * Moved tests sources to avoid conflicts when using lib.

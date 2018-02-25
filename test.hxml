@@ -9,5 +9,5 @@
 -D nodejs
 -D buddy-colors
 
-# Temporary bugfix for react 16 (waiting for haxe-react 1.2.2+)
--D react_monomorphic
+-D react_strict_typing
+-debug
