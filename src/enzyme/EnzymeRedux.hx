@@ -13,7 +13,7 @@ class EnzymeRedux {
 		return Enzyme.mount(node, {context: {store: store}});
 	}
 
-	public static function mountWithState(node:ReactElement, state:Dynamic):ReactWrapper {
+	public static function mountWithState(node:ReactElement, ?state:Dynamic):ReactWrapper {
 		return mountWithStore(node, createMockedStore(state));
 	}
 
