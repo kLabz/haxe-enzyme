@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1 (2018-03-05)
+
+* Updated redux helpers (added `ShouldAction` to match actions with buddy + improved `createMockedStore()`).
+
 ## 0.5.0 (2018-02-25)
 
 * Added redux helpers. See [EnzymeRedux](src/enzyme/EnzymeRedux.hx).

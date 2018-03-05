@@ -1,11 +1,14 @@
 package enzyme;
 
+import js.Promise;
 import react.ReactComponent.ReactElement;
+import redux.Redux.Action;
+import redux.StoreMethods;
 
 typedef MockedStore = {
-	getState:Void->Dynamic,
+	> StoreMethods<Dynamic>,
 	subscribe:Void->Void,
-	dispatch:Void->Void
+	getActions:Void->Array<Action>
 };
 
 class EnzymeRedux {
@@ -27,11 +30,16 @@ class EnzymeRedux {
 
 	public static function createMockedStore(?state:Dynamic = null):MockedStore {
 		if (state == null) state = {};
+		var actions:Array<Action> = [];
 
 		return {
 			getState: function() return state,
 			subscribe: function() {},
-			dispatch: function() {}
+			getActions: function() return actions,
+			dispatch: function(action:Action) {
+				actions.push(action);
+				return Promise.resolve(null);
+			}
 		};
 	}
 }

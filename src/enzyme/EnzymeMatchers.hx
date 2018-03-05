@@ -5,6 +5,10 @@ import buddy.Should;
 import react.ReactComponent;
 import enzyme.MatchersHelper.*;
 
+#if redux
+import redux.Redux.Action;
+#end
+
 class ShouldShallow extends Should<ShallowWrapper> {
 	static public function should(wrapper:ShallowWrapper) {
 		return new ShouldShallow(wrapper);
@@ -774,3 +778,31 @@ class ShouldReact extends Should<ReactWrapper> {
 		);
 	}
 }
+
+#if redux
+class ShouldAction extends Should<Action> {
+	static public function should(action:Action) {
+		return new ShouldAction(action);
+	}
+
+	public function new(value:Action, inverse = false) {
+		super(value, inverse);
+	}
+
+	public var not(get, never):ShouldAction;
+	private function get_not() { return new ShouldAction(value, !inverse); }
+
+	public function equal(enumValue:EnumValue, ?p:PosInfos) {
+		var enumType = Type.getEnum(enumValue);
+		var typeMatches = value.type == enumType.getName();
+		var valueMatches = typeMatches && Type.enumEq(value.value, enumValue);
+
+		test(
+			typeMatches && valueMatches,
+			p,
+			'Expected ${value.value} to match ${enumValue}',
+			'Expected ${value.value} not to match ${enumValue}'
+		);
+	}
+}
+#end
