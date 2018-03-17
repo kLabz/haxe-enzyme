@@ -1,0 +1,22 @@
+language: haxe
+
+haxe:
+  - 3.4.4
+  - stable
+  - development
+
+# TODO: remove once haxe-react is fixed for Haxe 4+
+matrix:
+  allow_failures:
+    - haxe: development
+
+install:
+  - node -v && npm install
+  - haxelib install hmm
+  - haxelib run hmm install
+  - npm run test:init
+
+script:
+  - npm run test:all
+
+

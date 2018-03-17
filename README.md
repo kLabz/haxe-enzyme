@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/kLabz/haxe-enzyme.svg?branch=master)](https://travis-ci.org/kLabz/haxe-enzyme)
+[![Haxelib Version](https://img.shields.io/github/tag/kLabz/haxe-enzyme.svg?label=haxelib)](http://lib.haxe.org/p/enzyme)
+
 # Haxe Enzyme
 
 A Haxe library offering externs for the [Enzyme](https://github.com/airbnb/enzyme) library.
