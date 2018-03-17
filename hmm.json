@@ -14,11 +14,6 @@
       "name": "react",
       "type": "haxelib",
       "version": null
-    },
-    {
-      "name": "redux",
-      "type": "haxelib",
-      "version": null
     }
   ]
 }

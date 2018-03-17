@@ -1,0 +1,17 @@
+language: haxe
+
+haxe:
+  - 3.4.4
+  - stable
+  - development
+
+install:
+  - node -v && npm install
+  - haxelib install hmm
+  - haxelib run hmm install
+  - npm run test:init
+
+script:
+  - npm run test:all
+
+
