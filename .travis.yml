@@ -5,6 +5,11 @@ haxe:
   - stable
   - development
 
+# TODO: remove once haxe-react is fixed for Haxe 4+
+matrix:
+  allow_failures:
+    - haxe: development
+
 install:
   - node -v && npm install
   - haxelib install hmm
