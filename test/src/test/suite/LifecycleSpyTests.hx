@@ -32,7 +32,7 @@ class LifecycleSpyTests extends SingleSuite {
 
 			it("should follow the react component lifecycle", {
 				var spy = new LifecycleSpy(TestClick);
-				var onClick = function(_) {};
+				var onClick = function() {};
 
 				var wrapper = mount(jsx('
 					<$TestClick onClick=$onClick />
@@ -69,7 +69,7 @@ class LifecycleSpyTests extends SingleSuite {
 
 			it("should call injected callbacks", {
 				var spy = new LifecycleSpy(TestClick);
-				var onClick = function(_) {};
+				var onClick = function() {};
 				var wrapper:ReactWrapper;
 
 				var methodCalls = {

@@ -12,8 +12,8 @@
     },
     {
       "name": "react",
-      "type": "haxelib",
-      "version": null
+      "type": "git",
+      "url": "git@github.com:back2dos/haxe-react.git"
     },
     {
       "name": "redux",

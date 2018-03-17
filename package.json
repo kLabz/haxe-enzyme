@@ -26,9 +26,9 @@
     "test:all": "npm run test:react15 && npm run test:react16",
     "test:init": "npm run test:react15:init && npm run test:react16:init",
     "test:react15": "cd test/react-15 && npm test",
-    "test:react15:init": "cd test/react-15 && npm install && haxelib run hmm install",
+    "test:react15:init": "cd test/react-15 && npm install && haxelib newrepo && haxelib install hmm && haxelib run hmm install",
     "test:react16": "cd test/react-16 && npm test",
-    "test:react16:init": "cd test/react-16 && npm install && haxelib run hmm install"
+    "test:react16:init": "cd test/react-16 && npm install && haxelib newrepo && haxelib install hmm && haxelib run hmm install"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
