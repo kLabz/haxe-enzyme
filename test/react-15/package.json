@@ -1,7 +1,7 @@
 {
   "name": "haxe-enzyme-react-15",
   "scripts": {
-    "test": "haxe ../../test.hxml test.hxml && node bin/test.js"
+    "test": "haxe ../../test.hxml test.hxml && node .build/test.js"
   },
   "devDependencies": {
     "enzyme": "^3.0.0",

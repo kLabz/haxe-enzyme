@@ -22,7 +22,7 @@
     "url": "https://github.com/kLabz"
   },
   "scripts": {
-    "test": "haxe test.hxml && node bin/test.js",
+    "test": "haxe test.hxml && node .build/test.js",
     "test:all": "npm run test:react15 && npm run test:react16",
     "test:init": "npm run test:react15:init && npm run test:react16:init",
     "test:react15": "cd test/react-15 && npm test",

@@ -1,4 +1,4 @@
--js bin/test.js
+-js .build/test.js
 -main test.EnzymeTests
 
 -cp src
