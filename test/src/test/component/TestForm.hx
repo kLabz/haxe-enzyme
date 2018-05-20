@@ -31,7 +31,7 @@ class TestForm extends ReactComponentOfState<TestFormState> {
 				<input id="not" defaultChecked=$false />
 
 				<input id="novalue" />
-				<input id="dvalue" defaultValue=$1 />
+				<input id="dvalue" defaultValue=${1} />
 
 				<div>
 					<input
