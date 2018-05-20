@@ -11,8 +11,8 @@ typedef TestFormState = {
 }
 
 class TestForm extends ReactComponentOfState<TestFormState> {
-	public function new(props) {
-		super(props);
+	public function new() {
+		super();
 		state = {
 			checked: false,
 			disabled: false,

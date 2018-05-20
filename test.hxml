@@ -10,4 +10,5 @@
 -D buddy-colors
 
 -D react_strict_typing
+-D react_deprecated_refs
 -debug
