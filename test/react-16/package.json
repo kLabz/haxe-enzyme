@@ -1,6 +1,7 @@
 {
   "name": "haxe-enzyme-react-16",
   "scripts": {
+    "postinstall": "haxelib newrepo && haxelib install hmm && haxelib run hmm install",
     "test": "haxe ../../test.hxml test.hxml && node .build/test.js"
   },
   "devDependencies": {
