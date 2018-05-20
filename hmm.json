@@ -12,6 +12,12 @@
     },
     {
       "name": "react",
+      "type": "git",
+      "url": "https://github.com/kLabz/haxe-react.git",
+      "ref": "next"
+    },
+    {
+      "name": "redux",
       "type": "haxelib",
       "version": null
     }
