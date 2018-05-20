@@ -105,15 +105,6 @@ class ShallowAPITests extends SingleSuite {
 				parent2.length.should.be(1);
 				parent2.parent().is(".unique").should.be(true);
 			});
-
-			#if react16
-			it("should return the context hash", {
-				var wrapper = shallow(jsx('<$TestComponent />'), {context: {foo: "bar"}});
-
-				wrapper.context().foo.should.be("bar");
-				wrapper.context("foo").should.be("bar");
-			});
-			#end
 		});
 	}
 }
