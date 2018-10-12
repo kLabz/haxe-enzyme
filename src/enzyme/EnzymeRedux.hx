@@ -1,9 +1,14 @@
 package enzyme;
 
 import js.Promise;
-import react.ReactComponent.ReactElement;
 import redux.Redux.Action;
 import redux.StoreMethods;
+
+#if ((react >= "2.0.0") || react_next)
+import react.ReactComponent.ReactFragment;
+#else
+import react.ReactComponent.ReactElement as ReactFragment;
+#end
 
 typedef MockedStore = {
 	> StoreMethods<Dynamic>,
@@ -12,19 +17,19 @@ typedef MockedStore = {
 };
 
 class EnzymeRedux {
-	public static function mountWithStore(node:ReactElement, store:MockedStore):ReactWrapper {
+	public static function mountWithStore(node:ReactFragment, store:MockedStore):ReactWrapper {
 		return Enzyme.mount(node, {context: {store: store}});
 	}
 
-	public static function mountWithState(node:ReactElement, ?state:Dynamic):ReactWrapper {
+	public static function mountWithState(node:ReactFragment, ?state:Dynamic):ReactWrapper {
 		return mountWithStore(node, createMockedStore(state));
 	}
 
-	public static function shallowWithStore(node:ReactElement, store:MockedStore):ShallowWrapper {
+	public static function shallowWithStore(node:ReactFragment, store:MockedStore):ShallowWrapper {
 		return Enzyme.shallow(node, {context: {store: store}});
 	}
 
-	public static function shallowWithState(node:ReactElement, state:Dynamic):ShallowWrapper {
+	public static function shallowWithState(node:ReactFragment, state:Dynamic):ShallowWrapper {
 		return shallowWithStore(node, createMockedStore(state));
 	}
 

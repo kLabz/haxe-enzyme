@@ -92,7 +92,11 @@ class ShouldShallow extends Should<ShallowWrapper> {
 		);
 	}
 
+	#if ((react >= "2.0.0") || react_next)
+	public function containReact(reactInstance:ReactFragment, ?p:PosInfos) {
+	#else
 	public function containReact(reactInstance:ReactElement, ?p:PosInfos) {
+	#end
 		if (value == null && reactInstance == null) {
 			return fail(
 				"Expected ShallowWrapper to contain ReactElement but both were null",
@@ -345,7 +349,11 @@ class ShouldShallow extends Should<ShallowWrapper> {
 		);
 	}
 
+	#if ((react >= "2.0.0") || react_next)
+	public function matchElement(reactInstance:ReactFragment, ?p:PosInfos) {
+	#else
 	public function matchElement(reactInstance:ReactElement, ?p:PosInfos) {
+	#end
 		if (value == null && reactInstance == null) {
 			return fail(
 				"Expected ShallowWrapper to match ReactElement but both were null",
@@ -471,7 +479,11 @@ class ShouldReact extends Should<ReactWrapper> {
 		);
 	}
 
+	#if ((react >= "2.0.0") || react_next)
+	public function containReact(reactInstance:ReactFragment, ?p:PosInfos) {
+	#else
 	public function containReact(reactInstance:ReactElement, ?p:PosInfos) {
+	#end
 		if (value == null && reactInstance == null) {
 			return fail(
 				"Expected ShallowWrapper to contain ReactElement but both were null",
@@ -736,7 +748,11 @@ class ShouldReact extends Should<ReactWrapper> {
 		);
 	}
 
+	#if ((react >= "2.0.0") || react_next)
+	public function matchElement(reactInstance:ReactFragment, ?p:PosInfos) {
+	#else
 	public function matchElement(reactInstance:ReactElement, ?p:PosInfos) {
+	#end
 		if (value == null && reactInstance == null) {
 			return fail(
 				"Expected ShallowWrapper to match ReactElement but both were null",

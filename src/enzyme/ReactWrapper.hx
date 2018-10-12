@@ -64,25 +64,41 @@ extern class ReactWrapper {
 		Returns whether or not a given node or array of nodes is somewhere in the render tree.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/contains.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function contains(nodeOrNodes:ReactFragment):Bool;
+	#else
 	public function contains(nodeOrNodes:EitherType<ReactElement, Array<ReactElement>>):Bool;
+	#end
 
 	/**
 		Returns whether or not a given react element is somewhere in the render tree.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/containsMatchingElement.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function containsMatchingElement(node:ReactSingleFragment):Bool;
+	#else
 	public function containsMatchingElement(node:ReactElement):Bool;
+	#end
 
 	/**
 		Returns whether or not all the given react elements are somewhere in the render tree.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/containsAllMatchingElements.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function containsAllMatchingElements(nodes:Array<ReactSingleFragment>):Bool;
+	#else
 	public function containsAllMatchingElements(nodes:Array<ReactElement>):Bool;
+	#end
 
 	/**
 		Returns whether or not one of the given react elements is somewhere in the render tree.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/containsAnyMatchingElements.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function containsAnyMatchingElements(nodes:Array<ReactSingleFragment>):Bool;
+	#else
 	public function containsAnyMatchingElements(nodes:Array<ReactElement>):Bool;
+	#end
 
 	/**
 		Returns whether or not the current root node has the given class name.
@@ -166,19 +182,31 @@ extern class ReactWrapper {
 		Returns the node at the provided index of the current wrapper.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/get.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function get(index:Int):ReactSingleFragment;
+	#else
 	public function get(index:Int):ReactElement;
+	#end
 
 	/**
 		Returns the wrapper's underlying node.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/getNode.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function getElement():ReactSingleFragment;
+	#else
 	public function getElement():ReactElement;
+	#end
 
 	/**
 		Returns the wrapper's underlying nodes.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/getNodes.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function getElements():Array<ReactFragment>;
+	#else
 	public function getElements():Array<ReactElement>;
+	#end
 
 	/**
 		Returns the outer most DOMComponent of the current wrapper.
@@ -316,7 +344,11 @@ extern class ReactWrapper {
 		Returns whether or not a given react element matches the current render tree.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ReactWrapper/matchesElement.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function matchesElement(node:ReactSingleFragment):Bool;
+	#else
 	public function matchesElement(node:ReactElement):Bool;
+	#end
 
 	/**
 		Reduces the current array of nodes to a value

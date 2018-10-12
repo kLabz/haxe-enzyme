@@ -4,7 +4,7 @@ import react.ReactComponent;
 import react.ReactMacro.jsx;
 
 typedef TestClickProps = {
-	var onClick:Void->Void;
+	@:optional var onClick:Void->Void;
 }
 
 typedef TestClickState = {

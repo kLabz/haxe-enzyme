@@ -52,7 +52,13 @@ class MatchersHelper {
 		return "[unknown]";
 	}
 
+	#if ((react >= "2.0.0") || react_next)
+	public static function getREName(re:ReactFragment):String {
+		if (!react.React.isValidElement(re)) return "[unknown]";
+		var re:ReactElement = untyped re;
+	#else
 	public static function getREName(re:ReactElement):String {
+	#end
 		if (re.type != null && re.type.displayName != null)
 			return re.type.displayName;
 

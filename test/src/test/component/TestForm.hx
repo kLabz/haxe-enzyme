@@ -39,11 +39,14 @@ class TestForm extends ReactComponentOfState<TestFormState> {
 						ref="ref"
 						checked=${state.checked}
 						disabled=${state.disabled}
+						onChange=${noop}
 						value=${state.value} />
 				</div>
 			</div>
 		');
 	}
+
+	function noop(_) {}
 
 	function toggleCheck(_) {
 		setState(function(state) return copy(state, {checked: !state.checked}));

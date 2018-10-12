@@ -85,15 +85,17 @@ class ShallowAPITests extends SingleSuite {
 
 			it("should find ancestors", {
 				var wrapper = shallow(jsx('
-					<$TestSimpleContainer>
-						<div className="unique">
-							<$TestSimpleContainer>
-								<div>
-									<div id="child" />
-								</div>
-							</$TestSimpleContainer>
-						</div>
-					</$TestSimpleContainer>
+					<div>
+						<$TestSimpleContainer>
+							<div className="unique">
+								<$TestSimpleContainer>
+									<div>
+										<div id="child" />
+									</div>
+								</$TestSimpleContainer>
+							</div>
+						</$TestSimpleContainer>
+					</div>
 				'));
 
 				var child = wrapper.find("#child");
