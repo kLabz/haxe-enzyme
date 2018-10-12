@@ -1,7 +1,12 @@
 package enzyme;
 
 import cheerio.Cheerio;
-import react.ReactComponent.ReactElement;
+
+#if ((react >= "2.0.0") || react_next)
+import react.ReactComponent.ReactFragment;
+#else
+import react.ReactComponent.ReactElement as ReactFragment;
+#end
 
 @:jsRequire("enzyme")
 extern class Enzyme {
@@ -11,7 +16,7 @@ extern class Enzyme {
 		Shallow rendering is useful to constrain yourself to testing a component as a unit,
 		and to ensure that your tests aren't indirectly asserting on behavior of child components.
 	**/
-	public static function shallow(node:ReactElement, ?options:ShallowRenderOptions):ShallowWrapper;
+	public static function shallow(node:ReactFragment, ?options:ShallowRenderOptions):ShallowWrapper;
 
 	/**
 		Static rendering is used to render react components to static HTML
@@ -19,7 +24,7 @@ extern class Enzyme {
 
 		Cheerio externs are provided via [js-kit](https://github.com/clemos/haxe-js-kit/blob/develop/js/npm/Cheerio.hx).
 	**/
-	public static function render(node:ReactElement, ?options:RenderOptions):Cheerio;
+	public static function render(node:ReactFragment, ?options:RenderOptions):Cheerio;
 
 	/**
 		Full DOM rendering is ideal for use cases where you have components that may interact
@@ -34,5 +39,5 @@ extern class Enzyme {
 
 		See `MountAPITests` for an example of using haxe-enzyme with jsdom.
 	**/
-	public static function mount(node:ReactElement, ?options:MountOptions):ReactWrapper;
+	public static function mount(node:ReactFragment, ?options:MountOptions):ReactWrapper;
 }

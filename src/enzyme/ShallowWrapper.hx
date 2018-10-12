@@ -58,38 +58,62 @@ extern class ShallowWrapper {
 		Returns whether or not a given node or array of nodes is somewhere in the render tree.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/contains.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function contains(nodeOrNodes:ReactFragment):Bool;
+	#else
 	public function contains(nodeOrNodes:EitherType<ReactElement, Array<ReactElement>>):Bool;
+	#end
 
 	/**
 		Returns whether or not a given react element exists in the shallow render tree.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/containsMatchingElement.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function containsMatchingElement(node:ReactSingleFragment):Bool;
+	#else
 	public function containsMatchingElement(node:ReactElement):Bool;
+	#end
 
 	/**
 		Returns whether or not all the given react elements exists in the shallow render tree.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/containsAllMatchingElement.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function containsAllMatchingElement(nodes:Array<ReactSingleFragment>):Bool;
+	#else
 	public function containsAllMatchingElement(nodes:Array<ReactElement>):Bool;
+	#end
 
 	/**
 		Returns whether or not one of the given react elements exists in the shallow render tree.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/containsAnyMatchingElement.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function containsAnyMatchingElement(nodes:Array<ReactSingleFragment>):Bool;
+	#else
 	public function containsAnyMatchingElement(nodes:Array<ReactElement>):Bool;
+	#end
 
 	/**
 		Returns whether or not the current render tree is equal to the given node,
 		based on the expected value.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/equals.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function equals(node:ReactSingleFragment):Bool;
+	#else
 	public function equals(node:ReactElement):Bool;
+	#end
 
 	/**
 		Returns whether or not a given react element matches the shallow render tree.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/matchesElement.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function matchesElement(node:ReactSingleFragment):Bool;
+	#else
 	public function matchesElement(node:ReactElement):Bool;
+	#end
 
 	/**
 		Returns whether or not the current node has the given class name.
@@ -186,19 +210,31 @@ extern class ShallowWrapper {
 		Returns the node at the provided index of the current wrapper.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/get.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function get(index:Int):ReactSingleFragment;
+	#else
 	public function get(index:Int):ReactElement;
+	#end
 
 	/**
 		Returns the wrapper's underlying node.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/getNode.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function getElement():ReactSingleFragment;
+	#else
 	public function getElement():ReactElement;
+	#end
 
 	/**
 		Returns the wrapper's underlying nodes.
 		See https://github.com/airbnb/enzyme/blob/master/docs/api/ShallowWrapper/getNodes.md
 	**/
+	#if ((react >= "2.0.0") || react_next)
+	public function getElements():Array<ReactFragment>;
+	#else
 	public function getElements():Array<ReactElement>;
+	#end
 
 	/**
 		Returns a wrapper of the node at the provided index of the current wrapper.
