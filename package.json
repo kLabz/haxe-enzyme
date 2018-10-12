@@ -22,14 +22,16 @@
     "url": "https://github.com/kLabz"
   },
   "scripts": {
-    "postinstall": "haxelib newrepo && haxelib install hmm && haxelib run hmm install",
-    "test": "haxe test.hxml && node .build/test.js",
-    "test:all": "npm run test:react15 && npm run test:react16",
-    "test:init": "npm run test:react15:init && npm run test:react16:init",
+    "postinstall": "haxelib install --always install.hxml",
+    "test": "haxe test.hxml -lib react && node .build/test.js",
+    "test:all": "npm run test:react15 && npm run test:react16 && npm run test:reactnext",
+    "test:init": "npm run test:react15:init && npm run test:react16:init && npm run test:reactnext:init",
     "test:react15": "cd test/react-15 && npm test",
     "test:react15:init": "cd test/react-15 && npm install",
     "test:react16": "cd test/react-16 && npm test",
-    "test:react16:init": "cd test/react-16 && npm install"
+    "test:react16:init": "cd test/react-16 && npm install",
+    "test:reactnext": "cd test/react-next && npm test",
+    "test:reactnext:init": "cd test/react-next && npm install"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",

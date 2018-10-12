@@ -1,0 +1,16 @@
+{
+  "name": "haxe-enzyme-react-next",
+  "scripts": {
+    "postinstall": "haxelib install --always install.hxml",
+    "test": "haxe ../../test.hxml test.hxml && node .build/test.js"
+  },
+  "devDependencies": {
+    "enzyme": "",
+    "enzyme-adapter-react-16": "",
+    "jsdom": "",
+    "prop-types": "",
+    "react": "",
+    "react-dom": "",
+    "react-test-renderer": ""
+  }
+}

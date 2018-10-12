@@ -11,9 +11,8 @@ matrix:
     - haxe: development
 
 install:
-  - node -v && npm install
-  - haxelib install hmm
-  - haxelib run hmm install
+  - node -v
+  - npm install
   - npm run test:init
 
 script:
