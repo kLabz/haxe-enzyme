@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.0 (2018-10-12)
+
+* Updated helpers and tests to work with both `react` and `react-next`
+* Updated `ShallowWrapper.containsAllMatchingElements` and `ShallowWrapper.containsAnyMatchingElements` names
+
 ## 0.5.1 (2018-03-05)
 
 * Updated redux helpers (added `ShouldAction` to match actions with buddy + improved `createMockedStore()`).
